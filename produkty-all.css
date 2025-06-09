@@ -1,4 +1,10 @@
 /*admin-general*/
+:root {
+  --primary-color: #0094dd;
+  --secondary-color: #005c90;
+  --text-color: #333;
+  --accent-color: #4caf50;
+}
 * {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
@@ -12,9 +18,8 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  max-width: 2000px;
- 
-  display: block;
+  max-width: 100%;
+  scroll-behavior: smooth;
   margin: 0 auto;
   background-color: #f8f9fa;
 }
@@ -103,11 +108,13 @@ header .top-banner h5 {
 }
 
 header .container {
-   width: 2000px; /* Pevná šířka pro obsah */
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 0 20px; /* Odstup od okrajů */
+   padding: 0 1rem;
 }
 
 header .logo {
@@ -437,7 +444,7 @@ footer {
   margin-right: -50vw;
   width: 100vw;
 
-background-color: #0094dd;
+background-color: var(--primary-color);
 color: #fff;
 padding: 30px 0;
 font-family: Arial, sans-serif;
@@ -505,7 +512,7 @@ gap: 10px;
 }
 
 .social-icons a {
-color: #0094dd;
+  color: var(--primary-color);
 background: #fff;
 border-radius: 50%;
 padding: 8px;
@@ -606,7 +613,7 @@ main {
 
 .sidebar ul li a {
   font-size: 19px;
-  color: #333;
+  color: var(--text-color);
 }
 .sidebar .contact{
   margin-top: 40px;
@@ -627,7 +634,7 @@ main {
 }
 .sidebar .contact a {
   font-size: 16px;
-  color: #333;
+  color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
   text-align: left;
@@ -642,40 +649,37 @@ main {
 }
 
 .course h1 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #0094dd;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 .course .box-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  flex-wrap: wrap;
-  
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
   width: 100%;
 }
 .course .box-container .box {
-  height: 30rem;
-  
-  width: 100%;
-  background: #fff;
-
-  margin: 1.3rem;
-  
-  cursor: pointer;
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.course .box-container .box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .course .box-container .box h2 {
   font-size: 24px;
   padding-top: 5px;
   transition: 0.2s;
   text-transform: none;
-  color: #333;
+  color: var(--text-color);
 }
 
 .course .box-container .box h4 {
@@ -684,7 +688,7 @@ main {
   transition: 0.2s;
   text-transform: none;
   font-weight: 400;
-  color: #333;
+  color: var(--text-color);
   line-height: 25px;
 }
 
@@ -748,12 +752,11 @@ main {
  margin: 0.7rem;
 }
 .course .box-container .box .image img {
- width: 90%;
- height: 90%;
- 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   text-align: center;
   border-radius: 10px;
-  
   display: block;
   margin: 5px auto;
 }
@@ -794,9 +797,9 @@ color: white;
 }
 
 .pagination a.active {
-  background-color: #4CAF50;
-  color: white;
-  border: 1px solid #4CAF50;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: 1px solid var(--accent-color);
 }
 
 .retro {
@@ -821,7 +824,7 @@ color: white;
 .retro .velde .fas.fa-arrow-circle-down{
   font-size: 25px;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-color);
 }
 .retro .velde {
   display: flex;
@@ -833,7 +836,7 @@ color: white;
 .retro .velde h2 {
   margin-bottom: 25px;
   font-size: 22px;
-  border-bottom: #333 solid 2px;
+  border-bottom: var(--text-color) solid 2px;
 }
 
 @media (max-width: 11350px) {
@@ -897,18 +900,18 @@ color: white;
 @media (max-width: 650px) {
 
   .course .box-container .box {
-    height: 20rem;
+    height: auto;
     margin-left: 0;
   }
 
   .course .box-container .box .image{
-    max-width: 20rem;
-    min-width: 20rem;
-    max-height: 20rem;
     margin-left: 0;
   }
 
   .course .box-container .box .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     margin-left: 0;
   }
 
@@ -939,9 +942,7 @@ color: white;
 @media (max-width: 500px){
 
   .course .box-container .box .image{
-    max-width: 16rem;
-    min-width: 16rem;
-    max-height: 16rem;
+    width: 100%;
   }
 
     .course .box-container .box {
