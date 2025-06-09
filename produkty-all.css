@@ -656,8 +656,8 @@ main {
 
 .course .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
   margin-bottom: 3rem;
   width: 100%;
 }
@@ -746,19 +746,16 @@ main {
   
 }
 .course .box-container .box .image{
-  min-width: 28rem;
-  height: 28rem;
-
- margin: 0.7rem;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0.7rem 0;
 }
 .course .box-container .box .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  text-align: center;
   border-radius: 10px;
   display: block;
-  margin: 5px auto;
 }
 
 .course .box-container .box img:hover{
@@ -840,14 +837,11 @@ color: white;
 }
 
 @media (max-width: 11350px) {
-
   .course .box-container .box {
-    height: 27rem;
+    height: auto;
   }
   .course .box-container .box .image{
-    max-width: 27rem;
-    min-width: 27rem;
-    max-height: 27rem;
+    width: 100%;
   }
   .course .box-container .box h4{
     font-size: 14px;
@@ -868,9 +862,7 @@ color: white;
     display: flex;
   }
   .course .box-container .box .image{
-    max-width: 26rem;
-    min-width: 26rem;
-    max-height: 26rem;
+    width: 100%;
   }
  
   .course h1 {
@@ -891,10 +883,9 @@ color: white;
 
 @media (max-width: 800px){
   .course .box-container .box {
-    width: 90%;
-    margin: 0.6rem;
+    width: 100%;
+    margin: 0.6rem 0;
   }
-
 }
 
 @media (max-width: 650px) {
@@ -993,10 +984,9 @@ color: white;
   font-size: 14px;
  }
  .course .box-container .box .image{
-  max-width: 11rem;
-  min-width: 11rem;
-  max-height: 12rem;
-}
+  width: 100%;
+  aspect-ratio: 1/1;
+ }
 
  .course .box-container .box h4 {
   display: none;
