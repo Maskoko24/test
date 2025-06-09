@@ -1,0 +1,1044 @@
+/*admin-general*/
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  max-width: 2000px;
+ 
+  display: block;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+footer {
+  width: 100%;
+}
+
+.cart {
+  display: none;
+}
+
+/* Zobrazit košík pouze na mobilních zařízeních se šířkou do 400px */
+@media (max-width: 400px) {
+  .cart {
+    display: block;
+    position: fixed;
+    bottom: 60px;  /* upravte dle potřeby */
+    right: 35px;   /* upravte dle potřeby */
+    z-index: 1000;
+  }
+  
+  .cart a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;  /* bílé pozadí */
+    border-radius: 50%;      /* kulatý tvar */
+    padding: 22px;           /* vnitřní odsazení pro větší kruh */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4); /* volitelný stín pro lepší vzhled */
+  }
+  
+  .cart a i {
+    color: green;
+    font-size: 35px;         /* případně upravte velikost ikony */
+  }
+}
+
+/*header-style.css*/
+.no-scroll {
+  overflow: hidden;
+}
+
+.nav-toggle {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+
+header {
+   width: 100%;
+   height: 110px;
+   background: #fff;
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center; /* Vycentrování obsahu */
+   padding: 0;
+   z-index: 1000;
+   border-bottom: black 2px solid;
+   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+header .top-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background-color: #d9effe;  /* bledomodrá */
+  color: #fff;                /* barva textu – upravte dle libosti */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1010;  
+          /* aby byl nad ostatními elementy */
+}
+
+header .top-banner h5 {
+  font-size: 20px;
+  color: #005C90;
+  font-weight: bold;
+  font-style: italic;
+}
+
+header .container {
+   width: 2000px; /* Pevná šířka pro obsah */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px; /* Odstup od okrajů */
+}
+
+header .logo {
+   display: inline-flex;
+   align-items: center;
+   text-transform: uppercase;
+}
+
+header .logo img {
+   max-width: 185px;
+   margin-left: 10px;
+}
+
+header .logo img:hover {
+   transition: transform 0.5s;
+   transform: scale(1.1);
+}
+
+header .navbar ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   padding-top: 28px;
+}
+
+header .navbar ul li {
+   margin: 0 0.8rem;
+}
+
+header .navbar ul li a {
+   font-family: "Arial";
+   font-size: 26px;
+   color: #005C90;
+   transition: 0.2s;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+header .navbar ul li a:hover {
+   text-decoration: underline;
+}
+
+  
+  header .navbar ul li a:hover{
+    
+    text-decoration: underline;
+  }
+
+ 
+  
+  header .logo {
+    display: inline-flex;
+    align-items: center;
+    color: var(--red);
+    text-transform: uppercase;
+    padding-top: 15px;
+  }
+
+  header nav img {
+    max-width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    padding-left: 10px;
+  }
+
+  header nav img:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+  }
+
+  header .logo img {
+    max-width: 185px;
+    margin-left: 10px;
+  }
+  
+  header .logo img:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+  }
+ 
+
+  header .logo .text-container i {
+    font-size: 15px;
+    margin-bottom: -10px;
+  }
+  
+  header .fa-bars {
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    display: none;
+    transition: 3s;
+    padding-top: 25px;
+  }
+
+  header .fa-times {
+    
+   
+    padding-top: 0px;
+    padding-bottom: 0;
+    
+  }
+
+ /* Wrapper pro logo a jazykový přepínač – umístí je do jednoho řádku bez mezery */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* žádná mezera mezi logem a vlajkou */
+}
+
+/* Upravený jazykový přepínač – odstraněno odsazení, aby seděl těsně vedle loga */
+.lang-switcher {
+  position: relative;
+  margin-left: 0; /* odstraní odsazení */
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Stylování tlačítka jazykového přepínače zůstává stejné */
+.lang-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher button img {
+  height: 65px; /* přirozená výška vlajky */
+  width: auto;
+  display: block;
+}
+
+/* Jazykové menu – položky pod sebou */
+#lang-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 200%; /* Umístí menu na střed tlačítka */
+  transform: translate(-100%, -10px); /* Posune menu doleva, takže pravý okraj menu bude uprostřed tlačítka */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1100;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#lang-menu.open {
+  transform: translate(-100%, 0); /* Menu "spadne" dolů, ale horizontálně zůstane posunuté doleva */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#lang-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+#lang-menu li:last-child {
+  border-bottom: none;
+}
+
+#lang-menu li img {
+  height: 35px;
+  width: auto;
+  margin-right: 10px;
+}
+#lang-menu li span {
+  font-size: 25px;
+}
+
+#lang-menu li:hover {
+  background: #f0f0f0;
+}
+
+  @media (min-width: 2400px) {
+    header {
+      height: 130px;
+    }
+    header .navbar ul li a {
+      font-size: 28px;
+    }
+    header .logo img{
+      max-width: 200px;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    header {
+     
+      padding: 0.94rem 2rem;
+      box-shadow: none;
+
+    }
+  }
+
+  @media (max-width: 1999px) {
+    header {
+      width: 100%;
+      padding: 0.94rem 2rem;
+    }
+  }
+  @media (max-width: 850px){
+    header .fa-bars {
+      display: block;
+      padding-right: 15px;
+    }
+    header .navbar {
+      position: fixed;
+      top: -100rem;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-radius: 1rem;
+      opacity: 0;
+      transition: 0.2s linear;
+    }
+  
+    header .navbar ul {
+      flex-flow: column;
+      padding: 2rem 0;
+    }
+  
+    header .navbar ul li {
+      margin: 1rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    header .navbar ul li  {
+      font-size: 22px;
+      display: block;
+    }
+    header .navbar ul li a {
+      font-size: 24px;
+      display: block;
+    }
+  
+    header .nav-toggle {
+      top: 5.5rem;
+      opacity: 1;
+    }
+
+    #lang-menu li img {
+      height: 25px;
+    }
+
+    #lang-menu li span {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 930px) {
+    header .logo img:hover {
+      transition: transform 0.5s;
+      transform: scale(1);
+    }}
+
+
+    @media (max-width: 500px){
+    header .logo img {
+      max-width: 135px;
+      margin-left: 0px;
+    }
+    header {
+      
+      height: 80px;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    header .top-banner h5 {
+      font-size: 14px;
+      
+    }
+  
+    header .top-banner {
+      height: 23px;
+    }
+    header .container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 490px) {
+    .lang-switcher button img {
+      height: 45px;
+    }
+
+    @media (max-width: 450px) {
+      .lang-switcher {
+        margin-top: 25px;
+      }
+    }
+    @media (max-width: 400px) {
+      .header-left {
+       gap: 10px;
+      }
+    }
+  } 
+
+/*footer.css*/    
+/* Footer Global Styles */
+
+footer {
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+
+background-color: #0094dd;
+color: #fff;
+padding: 30px 0;
+font-family: Arial, sans-serif;
+
+}
+
+.footer-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 20px;
+padding-left: 30px;
+
+
+}
+
+/* Footer Section */
+.footer-section {
+margin: 10px;
+flex: 1;
+min-width: 200px;
+}
+
+.footer-section h3 {
+font-size: 18px;
+margin-bottom: 15px;
+border-bottom: 2px solid #fff;
+padding-bottom: 5px;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin: 8px 0;
+text-decoration: none;
+font-size: 14px;
+}
+
+.footer-section ul li a {
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+}
+
+
+.footer-section ul li a:hover {
+text-decoration: underline;
+}
+
+/* Contact Section */
+.contacty ul li {
+display: flex;
+align-items: center;
+gap: 8px;
+margin: 5px 0;
+}
+
+/* Social Icons */
+.social-icons {
+display: flex;
+gap: 10px;
+}
+
+.social-icons a {
+color: #0094dd;
+background: #fff;
+border-radius: 50%;
+padding: 8px;
+font-size: 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 35px;
+height: 35px;
+text-decoration: none;
+}
+
+.social-icons a:hover {
+background: #0078d4;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+text-align: center;
+margin-top: 20px;
+border-top: 1px solid #fff;
+padding-top: 10px;
+font-size: 12px;
+
+}
+@media (min-width: 2001px){
+footer {
+  display: flex;
+  align-items: center;
+  
+  flex-direction: column;
+}
+.footer-container {
+  width: 2000px;
+  padding-left: 0;
+}
+.footer-bottom {
+  width: 2000px;
+}
+}
+@media (max-width: 600px) {
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-left: 10px;
+ 
+}
+}
+
+
+/*produkty.css*/
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  /*background: right top url("../images/produkt-img/info.png") no-repeat;*/
+  background-color: #fff;
+}
+
+main {
+  display: flex;
+   /* Výška vašeho headeru, nastavte podle potřeby */
+  padding: 30px;
+  padding-top: 140px;
+  padding-bottom: 0;
+  background-color: #fff;
+}
+
+.sidebar {
+  min-width: 25%;
+  max-width: 25%;
+  
+  padding: 20px;
+  
+  height: auto;
+  
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  border-bottom: black solid 2px;
+}
+
+
+.sidebar ul {
+  
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  border-bottom: rgb(65, 151, 250) solid 2px;
+}
+
+.sidebar ul li a {
+  font-size: 19px;
+  color: #333;
+}
+.sidebar .contact{
+  margin-top: 40px;
+}
+.sidebar .contact h1{
+  font-size: 26px;
+  border-bottom: 2px solid black;
+}
+.sidebar .contact img{
+  width: 100%;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.sidebar .contact ul {
+  text-decoration: none;
+  padding: 0;
+}
+.sidebar .contact a {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  font-style: italic;
+}
+
+
+.course {
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 15px;
+}
+
+.course h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #0094dd;
+}
+
+.course .box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap;
+  
+  margin-bottom: 30px;
+  width: 100%;
+}
+.course .box-container .box {
+  height: 30rem;
+  
+  width: 100%;
+  background: #fff;
+
+  margin: 1.3rem;
+  
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  
+}
+.course .box-container .box h2 {
+  font-size: 24px;
+  padding-top: 5px;
+  transition: 0.2s;
+  text-transform: none;
+  color: #333;
+}
+
+.course .box-container .box h4 {
+  font-size: 18px;
+  padding-top: 15px;
+  transition: 0.2s;
+  text-transform: none;
+  font-weight: 400;
+  color: #333;
+  line-height: 25px;
+}
+
+
+
+.course .box-container .box .kosik {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  margin: 10px;
+  margin-top: 20px;
+  
+  max-width: 80%;
+}
+
+.course .box-container .box .kosik h5 {
+  display: none;
+}
+
+.course .spolecne {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.course .box-container .box .kosik p {  
+  margin-top: 15px;
+ 
+  font-weight: bold;
+  color: #dc3545;
+  font-size: 25px;
+  min-width: 100px;
+}
+
+
+.course .hide {
+  display: none;
+}
+
+.course .box-container .box button{
+  width: 195px;
+  height: 45px;
+  font-size: 17px;
+
+  margin-top: 15px;
+  color: white;
+  background-color: green;
+ 
+  
+  border: green;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  
+}
+.course .box-container .box .image{
+  min-width: 28rem;
+  height: 28rem;
+
+ margin: 0.7rem;
+}
+.course .box-container .box .image img {
+ width: 90%;
+ height: 90%;
+ 
+  text-align: center;
+  border-radius: 10px;
+  
+  display: block;
+  margin: 5px auto;
+}
+
+.course .box-container .box img:hover{
+  transition: 1s;
+  scale: 1.05;
+}
+
+.course .box-container .box button:hover {
+  transition: 1s;
+  background: rgb(94, 163, 94);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 5px 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.pagination a:hover {
+transition: 0.5s;
+background-color: rgb(98, 98, 211);
+border: 1px solid rgb(98, 98, 211);
+color: white;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.retro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.retro .acka{
+  margin-left: 10px;
+}
+.retro a {
+  display: none;
+  text-decoration: none;
+  color: #000;
+  margin: 5px 0px;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.retro .velde .fas.fa-arrow-circle-down{
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.retro .velde {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.retro .velde h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  border-bottom: #333 solid 2px;
+}
+
+@media (max-width: 11350px) {
+
+  .course .box-container .box {
+    height: 27rem;
+  }
+  .course .box-container .box .image{
+    max-width: 27rem;
+    min-width: 27rem;
+    max-height: 27rem;
+  }
+  .course .box-container .box h4{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1270px) {
+  .retro {
+    display: none;
+  }
+}
+
+@media (max-width: 1270px) {
+  .sidebar {
+    display: none;
+  }
+  .retro {
+    display: flex;
+  }
+  .course .box-container .box .image{
+    max-width: 26rem;
+    min-width: 26rem;
+    max-height: 26rem;
+  }
+ 
+  .course h1 {
+    font-size: 22px;
+   }
+
+}
+
+@media (max-width: 970px) {
+  .course .box-container .box h4 {
+    display: none;
+  }
+  .course .spolecne{
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 800px){
+  .course .box-container .box {
+    width: 90%;
+    margin: 0.6rem;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .course .box-container .box {
+    height: 20rem;
+    margin-left: 0;
+  }
+
+  .course .box-container .box .image{
+    max-width: 20rem;
+    min-width: 20rem;
+    max-height: 20rem;
+    margin-left: 0;
+  }
+
+  .course .box-container .box .image img {
+    margin-left: 0;
+  }
+
+  .course .box-container .box h2{
+    font-size: 16px;
+  }
+  .course .box-container .box h4 {
+    font-size: 13px;
+  }
+  .course .box-container .box .kosik p{
+    font-size: 16px;
+  }
+
+  .course .box-container .box button{
+    width: 140px;
+    font-size: 13px;
+    height: 30px;
+  }
+  .course .box-container .box .kosik{
+    padding-left: 5px;
+  }
+  .fromtop {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 500px){
+
+  .course .box-container .box .image{
+    max-width: 16rem;
+    min-width: 16rem;
+    max-height: 16rem;
+  }
+
+    .course .box-container .box {
+    
+      margin: 0.6rem;
+     
+      height: auto;
+      padding-right: 0;
+    }
+   
+  
+    .course .box-container .box .kosik {
+      max-height: 19rem;
+    }
+
+    .course .box-container .box button {
+      margin-bottom: 0;
+    }
+}
+@media (max-width: 500px) {
+ main {
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 0;
+  padding-top: 110px;
+  margin-left: 0px;
+  margin-right: 0px;
+ }
+ .course{
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0;
+ }
+
+ .course .retro {
+  padding-right: 15px;
+ }
+
+ .course .box-container{
+  margin-bottom: 0;
+ }
+
+ .course h1 {
+  font-size: 22px;
+ }
+
+ .course .box-container .box h2 {
+  font-size: 14px;
+ }
+ .course .box-container .box .image{
+  max-width: 11rem;
+  min-width: 11rem;
+  max-height: 12rem;
+}
+
+ .course .box-container .box h4 {
+  display: none;
+}
+
+
+
+.course .box-container .box .kosik {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+  padding-left: 2px;
+}
+
+
+.course .box-container .box .kosik p {
+  margin-top: 6px;
+}
+
+.course .box-container .box .kosik button {
+  margin-top: 6px;
+}
+
+}
+@media (min-width: 600px){
+
+  #backToTop {
+    display: none; /* Skryté ve výchozím stavu */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 199;
+    border: none;
+    outline: none;
+    background-color: rgb(188, 188, 191);
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 20px;   
+  }
+
+
+  #backToTop:hover {
+    background-color: #555;
+  }}
